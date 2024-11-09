@@ -1,6 +1,7 @@
 # Java Algorithm Implementations - Labsheet 1 & Labsheet 2
 
 This project contains Java code implementations for various algorithms and operations, as described in **Labsheet 1** and **Labsheet 2**. The project includes operations for handling arrays, strings, and pattern matching algorithms, complete with test cases and analytical reports on complexity.
+I have report analysis in both file seperately for better code readability
 
 ## Table of Contents
 
