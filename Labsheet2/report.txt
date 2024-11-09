@@ -1,0 +1,78 @@
+Complexity Analysis of the Implemented Algorithms
+
+
+1. Knuth-Morris-Pratt (KMP) Pattern Matching Algorithm
+Algorithm Description:
+
+The KMP pattern matching algorithm is used to find the occurrence of a pattern within a text. It uses the longest prefix-suffix (LPS) array to avoid unnecessary re-checks of characters in the pattern.
+Time Complexity:
+
+    Best-case Time Complexity (Ω):
+    The best case occurs when the pattern is found early in the text or when there are no mismatches.
+    Ω(n): In the best case, we can find the pattern in the first few characters or immediately return a match. This happens when the pattern matches early in the text, or there is no need to traverse much of the text.
+
+    Worst-case Time Complexity (O):
+    The worst-case time complexity occurs when we have to scan the entire text for every pattern character. This can happen when there are many mismatches or partial matches. However, KMP's clever use of the LPS array ensures that we never re-check a character in the pattern.
+    O(n + m): Where n is the length of the text and m is the length of the pattern. The complexity arises because:
+        Computing the LPS array takes O(m) time.
+        Matching the text against the pattern takes O(n) time, but without unnecessary re-checks.
+
+    Average-case Time Complexity (Θ):
+    On average, the time complexity is similar to the worst case, as the KMP algorithm generally avoids re-checking characters.
+    Θ(n + m): In practice, for most random text and pattern inputs, the matching time complexity will still depend on both the size of the text (n) and the pattern (m).
+
+Space Complexity:
+
+    The space complexity of the KMP algorithm is determined by the space required to store the LPS array.
+    O(m): The LPS array has a size of m, where m is the length of the pattern. No additional significant memory is used by the algorithm besides this.
+
+-----------------------------------------------------------------------------------------
+
+2. Run Length Encoding (RLE)
+Algorithm Description:
+
+Run Length Encoding (RLE) compresses strings by replacing consecutive occurrences of characters with a count followed by the character. For example, the string "aaabbbcccaaa" would be encoded as "3a3b3c3a".
+Time Complexity:
+
+    Best-case Time Complexity (Ω):
+    The best case occurs when the input string has no consecutive repeated characters. In this case, each character is treated as a single group.
+    Ω(n): The best case happens when the string is highly diverse, and we iterate through it once, each time appending the character and its count of 1.
+
+    Worst-case Time Complexity (O):
+    The worst-case occurs when the string is composed of a single repeating character (e.g., "aaaa..."). The algorithm will still iterate through the string once, but the encoding will involve a single count for the entire string.
+    O(n): The worst case still requires a full pass through the string to count repetitions, which leads to O(n) complexity, where n is the length of the string.
+
+    Average-case Time Complexity (Θ):
+    On average, the time complexity is still O(n), as the algorithm iterates through the string once, grouping consecutive characters.
+    Θ(n): This is because RLE always processes each character in the string once.
+
+Space Complexity:
+
+    The space complexity of RLE is determined by the space needed to store the resulting encoded string.
+    O(n): In the worst case, the compressed output could be just as large as the original string (when no characters repeat), resulting in O(n) space complexity. In the best case, where many characters are repeated, the space complexity can be significantly smaller than O(n).
+
+----------------------------------------------------------------------------
+Summary of Time and Space Complexities:
+Algorithm	Best-case Time Complexity	Average-case Time Complexity	Worst-case Time Complexity	Space Complexity
+KMP (Pattern Matching)	Ω(n)	Θ(n + m)	O(n + m)	O(m)
+RLE (Run Length Encoding)	Ω(n)	Θ(n)	O(n)	O(n)
+
+
+-----------------------------------------------------------------------------------------
+Big O, Omega, and Theta Notations:
+
+    Big O (O): Represents the upper bound, or the worst-case time complexity. This is the maximum time the algorithm will take for any input size.
+    Omega (Ω): Represents the lower bound, or the best-case time complexity. This is the minimum time the algorithm will take for any input size.
+    Theta (Θ): Represents the tight bound, or the average-case time complexity. This is the time complexity for most typical inputs.
+
+Best, Average, and Worst-case Scenarios:
+
+    KMP (Pattern Matching):
+        Best-case: The pattern is found early or there are no mismatches, leading to a linear scan of the text (Ω(n)).
+        Average-case: The algorithm efficiently finds matches using the LPS array, leading to Θ(n + m) time complexity.
+        Worst-case: In the worst case, when there are many mismatches or partial matches, the algorithm takes O(n + m) time, which is still linear with respect to the length of the text and the pattern.
+
+    RLE (Run Length Encoding):
+        Best-case: Every character is unique, requiring a pass over the entire string with no compression (Ω(n)).
+        Average-case: The algorithm processes each character once, leading to Θ(n) time complexity.
+        Worst-case: The worst case occurs when all characters in the string are the same, but the algorithm still scans the entire string (O(n)).

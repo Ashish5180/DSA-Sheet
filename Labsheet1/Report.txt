@@ -1,0 +1,80 @@
+Algorithm Analysis Report
+
+
+1. Array Operations
+Static Array
+
+    Insertion:
+        Time Complexity: O(1)O(1) — Since we are appending an element to a known position, insertion is constant time.
+        Space Complexity: O(n)O(n) — Requires space proportional to the number of elements, with no resizing.
+
+    Deletion:
+        Time Complexity: O(n)O(n) — Requires shifting elements to fill the gap after deletion, so in the worst case, it takes linear time.
+        Space Complexity: O(n)O(n) — Space usage is linear as it maintains a fixed-size array.
+
+    Traversal:
+        Time Complexity: O(n)O(n) — Traversal requires iterating through each element, so it takes linear time.
+        Space Complexity: O(n)O(n) — Linear space for holding array elements.
+
+Dynamic Array
+
+    Insertion:
+        Time Complexity: O(1)O(1) amortized — Although resizing occurs, it happens infrequently as capacity doubles, so the overall time is amortized constant time.
+        Space Complexity: O(n)O(n) — Since the array resizes dynamically, it requires linear space to store elements.
+
+    Deletion:
+        Time Complexity: O(n)O(n) — Similar to the static array, deletion requires shifting elements to fill gaps, which takes linear time in the worst case.
+        Space Complexity: O(n)O(n) — Linear space usage.
+
+    Traversal:
+        Time Complexity: O(n)O(n) — Traversal takes linear time as each element is accessed once.
+        Space Complexity: O(n)O(n) — Space for storing elements is linear.
+
+
+
+---------------------------------------------------------------------------------------
+
+
+2. String Operations
+Concatenation
+
+    Time Complexity: O(m+n)O(m+n) — Concatenating two strings of lengths mm and nn requires copying each character, so the complexity is linear in the combined length of the strings.
+    Space Complexity: O(m+n)O(m+n) — A new string of combined length is created.
+
+Substring
+
+    Time Complexity: O(k)O(k) — Extracting a substring of length kk takes linear time since it requires copying kk characters.
+    Space Complexity: O(k)O(k) — Requires kk space for the substring.
+
+Comparison
+
+    Time Complexity: O(min⁡(m,n))O(min(m,n)) — In the worst case, it compares characters up to the length of the shorter string.
+    Space Complexity: O(1)O(1) — Constant space is used for the comparison.
+
+Character Frequency
+
+    Time Complexity: O(n)O(n) — Iterating through each character of a string of length nn to update the frequency map.
+    Space Complexity: O(u)O(u), where uu is the number of unique characters in the string — A HashMap is used to store frequency counts.
+
+
+
+
+------------------------------------------------------------------------------------------
+3. Solving Recurrence Relations
+Example Recurrence Relations
+
+    T(n)=T(n/2)+O(1)T(n)=T(n/2)+O(1)
+        Solution: O(log⁡n)O(logn)
+        Explanation: The recurrence divides the problem size in half with each recursive step, and each level of the recursion tree has constant work. This is a classic divide-and-conquer recurrence leading to logarithmic complexity.
+
+    T(n)=2T(n/2)+O(n)T(n)=2T(n/2)+O(n)
+        Solution: O(nlog⁡n)O(nlogn)
+        Explanation: Using the Master theorem, a=2a=2, b=2b=2, and f(n)=nf(n)=n, which fits Case 2 of the theorem (since nlog⁡ba=nnlogb​a=n matches the O(n)O(n) term), so the result is O(nlog⁡n)O(nlogn). This is typical for divide-and-conquer algorithms like merge sort.
+
+    T(n)=T(n−1)+O(1)T(n)=T(n−1)+O(1)
+        Solution: O(n)O(n)
+        Explanation: The recurrence reduces the problem size by 1 each time with a constant amount of work at each step, leading to a linear complexity.
+
+    T(n)=T(n−1)+O(n)T(n)=T(n−1)+O(n)
+        Solution: O(n2)O(n2)
+        Explanation: Each step reduces the problem size by 1 but has O(n)O(n) work per step, resulting in quadratic complexity.
