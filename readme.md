@@ -1,94 +1,112 @@
-Labsheet 1 & Labsheet 2 - Java Code Implementation
+# Java Algorithm Implementations - Labsheet 1 & Labsheet 2
 
-This project contains the Java code implementations for various algorithms and operations, as described in Labsheet 1 and Labsheet 2. The project includes operations for handling arrays, strings, and pattern matching algorithms, along with test cases and report analysis.
-Table of Contents
+This project contains Java code implementations for various algorithms and operations, as described in **Labsheet 1** and **Labsheet 2**. The project includes operations for handling arrays, strings, and pattern matching algorithms, complete with test cases and analytical reports on complexity.
 
-    Labsheet 1
-        Array Operations
-        String Operations
-        Complexity Analysis
-    Labsheet 2
-        String Pattern Matching and Compression
-        Complexity Analysis
-    How to Run
+## Table of Contents
 
-Labsheet 1
-Array Operations
+- [Labsheet 1](#labsheet-1)
+  - [Array Operations](#array-operations)
+  - [String Operations](#string-operations)
+  - [Complexity Analysis](#complexity-analysis-labsheet-1)
+- [Labsheet 2](#labsheet-2)
+  - [String Pattern Matching and Compression](#string-pattern-matching-and-compression)
+  - [Complexity Analysis](#complexity-analysis-labsheet-2)
+- [How to Run](#how-to-run)
+  - [Prerequisites](#prerequisites)
+  - [Running the Code](#running-the-code)
+  - [Test Cases and Classes](#test-cases-and-classes)
+- [Additional Information](#additional-information)
 
-    Static Array: Implements insertion, deletion, and traversal for a static array.
-    Dynamic Array: Implements insertion, deletion, and traversal for a dynamic array.
-    Test Cases: Test cases have been implemented in the same file for verification of the operations.
-    Report Analysis: A separate report analyzing the time and space complexities using Big O, Omega, and Theta notations is included in the folder.
+---
 
-String Operations
+## Labsheet 1
 
-    Concatenation, Substring, and Comparison: Implements string operations such as concatenation, extracting substrings, and comparing two strings for equality.
-    Character Frequency: A function that calculates the frequency of characters in a given string.
-    Test Cases: Test cases are implemented and tested directly in the same file.
-    Report Analysis: A separate report analyzing the time and space complexities of string operations is included in the folder.
+### Array Operations
 
-Complexity Analysis
+- **Static Array**: Implements insertion, deletion, and traversal operations on a static array.
+- **Dynamic Array**: Provides insertion, deletion, and traversal for dynamic arrays.
+- **Test Cases**: Integrated into the code files for verifying the correctness of array operations.
+- **Report Analysis**: Contains analysis on time and space complexities, utilizing Big O, Omega, and Theta notations.
 
-    A detailed analysis of the time and space complexity for all the algorithms implemented, using Big O, Omega, and Theta notations, is provided in a separate report.
+### String Operations
 
-Labsheet 2
-String Pattern Matching and Compression
+- **Concatenation, Substring, and Comparison**: Implements string operations for concatenation, substring extraction, and comparison of strings.
+- **Character Frequency**: Calculates the frequency of each character within a given string.
+- **Test Cases**: Embedded in the code files for direct testing.
+- **Report Analysis**: A separate report evaluates the complexity of each string operation.
 
-    Knuth-Morris-Pratt (KMP) Pattern Matching: Implements the KMP algorithm for pattern matching.
-    Run Length Encoding (RLE): Implements the RLE algorithm to compress strings.
-    Test Cases: Test cases have been written for both algorithms and included in the code.
-    Report Analysis: A separate report analyzing the time and space complexities of these algorithms is provided in the folder.
+### Complexity Analysis (Labsheet 1)
 
-Complexity Analysis
+A comprehensive report on the time and space complexity for all algorithms, analyzing them using Big O, Omega, and Theta notations.
 
-    A report analyzing the time and space complexities of the implemented algorithms using Big O, Omega, and Theta notations is included.
+---
 
-How to Run
-Prerequisites
+## Labsheet 2
 
-Make sure you have the following installed on your system:
+### String Pattern Matching and Compression
 
-    Java JDK (version 11 or higher)
+- **Knuth-Morris-Pratt (KMP) Pattern Matching**: Implements the KMP algorithm for efficient string pattern matching.
+- **Run Length Encoding (RLE)**: Compresses strings using the RLE algorithm.
+- **Test Cases**: Included in the code files for validating both algorithms.
+- **Report Analysis**: Complexity analysis report for these algorithms is available.
 
-Running the Code
+### Complexity Analysis (Labsheet 2)
 
-    Clone the repository or download the project files to your local machine.
+An additional report detailing the time and space complexities for algorithms using Big O, Omega, and Theta notations.
 
-    Open a terminal (or command prompt) and navigate to the folder where the project is located.
+---
 
-    To compile and run the code for Labsheet 1:
-        Navigate to the folder where Labsheet 1 is located.
-        Compile the Java file:
+## How to Run
 
-javac StaticArrayOperations.java
-javac StringOperations.java
+### Prerequisites
 
-Run the compiled Java class:
+Ensure the following is installed on your system:
 
+- Java JDK (version 11 or higher)
+
+### Running the Code
+
+1. **Clone the repository** or download the project files to your local machine.
+2. **Open a terminal** (or command prompt) and navigate to the folder containing the project files.
+
+#### To Compile and Run Code for Labsheet 1:
+
+1. Navigate to the `Labsheet 1` folder.
+2. Compile the Java files:
+    ```bash
+    javac StaticArrayOperations.java
+    javac StringOperations.java
+    ```
+3. Run the compiled classes:
+    ```bash
     java StaticArrayOperations
     java StringOperations
+    ```
 
-To compile and run the code for Labsheet 2:
+#### To Compile and Run Code for Labsheet 2:
 
-    Navigate to the folder where Labsheet 2 is located.
-    Compile the Java file:
+1. Navigate to the `Labsheet 2` folder.
+2. Compile the Java files:
+    ```bash
+    javac StringAlgorithms.java
+    javac RunLengthEncoding.java
+    ```
+3. Run the compiled classes:
+    ```bash
+    java StringAlgorithms
+    java RunLengthEncoding
+    ```
 
-javac StringAlgorithms.java
-javac RunLengthEncoding.java
+Check the terminal output for test case results and operation correctness.
 
-Run the compiled Java class:
+### Test Cases and Classes
 
-        java StringAlgorithms
-        java RunLengthEncoding
+- Test cases are included within each class in Labsheet 1 and Labsheet 2 for simplicity.
+- The classes and methods are structured for reusability and ease of testing.
+- Each Labsheet folder includes a report analyzing the algorithm complexities.
 
-    Check the outputs in the terminal for test case results and the correctness of the operations.
+---
 
-Test Cases and Classes
+## Additional Information
 
-    In both Labsheet 1 and Labsheet 2, test cases for each class operation have been implemented directly in the same files for simplicity.
-    The classes and their respective methods are designed to be reusable and testable.
-    Separate reports analyzing the complexity of the algorithms are included in both the Labsheet 1 and Labsheet 2 folders.
-
-Additional Information
-
-If you encounter any issues or have questions regarding the code, feel free to reach out.
+For any issues or questions regarding the code, please feel free to reach out.
